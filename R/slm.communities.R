@@ -18,9 +18,9 @@ slm.community <-
                       mode = "collapse",
                       edge.attr.comb = list(e.weight = "sum", "ignore"))
     }
-
-    nodes <- as_data_frame(g, what = "vertices")
-    edges <- as_data_frame(g, what = "edges")
+# change from as_data_frame to get_data_frame
+    nodes <- get_data_frame(g, what = "vertices")
+    edges <- get_data_frame(g, what = "edges")
 
     nodes$seq <- seq_along(nodes$name)
 
