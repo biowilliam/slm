@@ -2,7 +2,7 @@
 smart local moving (SLM) algorithm is an algorithm for community detection (or clustering) in large networks
 
 #  Change
-change from as_data_frame() to get_data_frame() from master chen198328/slm
+change from as_data_frame() to igraph::as_data_frame() from master chen198328/slm
 
 # usage
 
