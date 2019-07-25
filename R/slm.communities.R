@@ -18,9 +18,9 @@ slm.community <-
                       mode = "collapse",
                       edge.attr.comb = list(e.weight = "sum", "ignore"))
     }
-# change from as_data_frame to get_data_frame
-    nodes <- get_data_frame(g, what = "vertices")
-    edges <- get_data_frame(g, what = "edges")
+
+    nodes <- igraph::as_data_frame(g, what = "vertices")
+    edges <- igraph::as_data_frame(g, what = "edges")
 
     nodes$seq <- seq_along(nodes$name)
 
