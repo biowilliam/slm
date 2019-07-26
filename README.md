@@ -3,14 +3,8 @@ Mac version java wrapper for smart local moving (SLM) algorithm is an algorithm 
 
 
 #  Change
-change from as_data_frame() to igraph::as_data_frame() from master chen198328/slm
-## windows version:
-jar.path <- paste('"', jar.path, '"', sep = "") 
-input.quote <- paste('"', input, '"', sep = "")
- output.quote <- paste('"', output, '"', sep = "")
-## Mac version:
-input.quote  <- input
-output.quote <- output
+change from as_data_frame() to igraph::as_data_frame() from master chen198328/slm ;
+added parameter version= "Win" or "Mac"
 
 # usage
 
