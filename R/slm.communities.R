@@ -8,6 +8,7 @@ slm.community <-
            iterations = 10,
            randomseed = 0,
            print = 0,
+           version="Mac",
            memory.size="–Xmx4000m",
            stack.size="-Xss1000k") {
     require(igraph)
@@ -53,10 +54,17 @@ slm.community <-
     jar.path <-
       file.path(installed_path, "slm", "java", "ModularityOptimizer.jar")
 
-    jar.path <- paste('"', jar.path, '"', sep = "")
-
-    input.quote <- paste('"', input, '"', sep = "")
-    output.quote <- paste('"', output, '"', sep = "")
+    if (version=="Mac"){
+      input.quote  <- input
+      output.quote <- output
+    }else if (version=="Win"){
+      jar.path <- paste('"', jar.path, '"', sep = "")
+      
+      input.quote <- paste('"', input, '"', sep = "")
+      output.quote <- paste('"', output, '"', sep = "")
+    }else { 
+      stop("Please choose your OS version either Mac or Win")
+    }
 
     args <-
       c("-jar",
