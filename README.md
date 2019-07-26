@@ -19,8 +19,8 @@ library(slm)
 
 data("karate")
 
-slm <-slm.community(karate)
-plot(slm, karate)
+slm.cluster <-SLM.community(karate)
+plot(slm.cluster, karate)
 ```
 
 # plot
