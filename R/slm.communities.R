@@ -1,4 +1,4 @@
-slm.community <-
+SLM.community <-
   function(g,
            e.weight = "weight",
            modularity = 1,
