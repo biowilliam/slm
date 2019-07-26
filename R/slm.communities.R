@@ -8,9 +8,9 @@ slm.community <-
            iterations = 10,
            randomseed = 0,
            print = 0,
-           version="Mac",
-           memory.size="–Xmx4000m",
-           stack.size="-Xss1000k") {
+           version = "Mac",
+           memory.size = "–Xmx4000m",
+           stack.size = "-Xss1000k") {
     require(igraph)
 
     if (is.directed(g)) {
